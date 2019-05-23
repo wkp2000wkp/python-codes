@@ -173,8 +173,18 @@ def main():
 
     # 读取网页内容
     webPage = urllib.request.urlopen(url)
-    data = webPage.read()
+    #网页是gzip时使用
+    html = webPage.read()
+    buff = BytesIO(html)
+    f= gzip.GzipFile(fileobj=buff)
+    data = f.read()
+    #原抓取代码部分
+#     data = webPage.read()
+    
     content = data.decode('UTF-8')
+    
+    
+    
     print('> 网站内容抓取完毕，内容长度：', len(content))
 
     # 把网站的内容写下来
