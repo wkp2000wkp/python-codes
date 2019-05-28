@@ -11,6 +11,9 @@ import os
 import time
 from functools import reduce
 
+from io import BytesIO
+import gzip
+
 IMG_TYPE_ARR = ['jpg', 'png', 'ico', 'gif', 'jpeg', 'svg']
 
 # 正则表达式预编译
