@@ -1,0 +1,19 @@
+# coding: utf8
+import os
+
+class save_info_txt:
+
+    def saveFileConnect(self,filepath,connect):
+        htmlfile = open(filepath, "a")
+        htmlfile.writelines(connect+'\n')
+        htmlfile.close()
+        return True
+
+    def getFileForLines(self,filepath):
+        if not os.path.exists(filepath):
+            # print filepath
+            open(filepath, 'w')
+        htmlfile = open(filepath, "r")
+        list = htmlfile.readlines()
+        htmlfile.close()
+        return list
