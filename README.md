@@ -6,7 +6,7 @@ The repository is the record of some python codes.
 1.网址分析
 
 https://mhwg.org
-wiki内容爬取，网页整体静态页，地址包含data 及 ida 两类，地址都是相对地址/开头，部分地址有#做锚点，其他地址主要是bbs，资源服务器，广告地址
+wiki内容爬取，网页整体静态页，地址包含data 及 ida 两类，地址都是相对地址/开头，部分地址有#做锚点，其他地址主要是bbs，资源服务器，广告地址；部分页面结果是htm，发现页面都是404，需考虑过滤或者补充htm至html
 
 2.网页内容分析
 
